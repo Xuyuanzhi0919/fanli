@@ -74,7 +74,7 @@ function install::Debian_Ubuntu(){
 
         
         log::info "[node]" "node install"
-        command::exec "curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash - && apt install -y nodejs"
+        command::exec "curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - && apt install -y nodejs"
         check::exit_code "$?" "node" "node install" "exit"
 
 
@@ -102,7 +102,7 @@ function install::CentOS_Oracle(){
 
         
         log::info "[node]" "node install"
-        command::exec "curl -fsSL https://rpm.nodesource.com/setup_16.x | sudo -E bash - && yum install -y nodejs"
+        command::exec "curl -fsSL https://rpm.nodesource.com/setup_18.x | sudo -E bash - && yum install -y nodejs"
         check::exit_code "$?" "node" "node install" "exit"
 
         log::info "[node]" "node dependency installation"
